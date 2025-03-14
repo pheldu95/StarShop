@@ -1,0 +1,34 @@
+<h1>Starshop</h1>
+
+<div>
+    There are {{ numberOfStarships }} starships
+
+    {% if numberOfStarships > 20 %}
+        <p>
+            {# Comments syntax #}
+            more than 20 starships
+        </p>
+    {% endif %}
+</div>
+
+<div>
+    <h2>My Ship</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ myShip.name | upper }}</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>{{ myShip.class }}</td>
+        </tr>
+        <tr>
+            <th>Captain</th>
+            <td>{{ myShip.captain }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ myShip.status }}</td>
+        </tr>
+    </table>
+</div>
