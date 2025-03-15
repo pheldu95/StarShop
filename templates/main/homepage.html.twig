@@ -5,12 +5,12 @@
 <h1>Starshop</h1>
 
 <div>
-    There are {{ numberOfStarships }} starships
+    There are {{ ships|length }} starships
 
-    {% if numberOfStarships > 20 %}
+    {% if ships|length > 2 %}
         <p>
             {# Comments syntax #}
-            more than 20 starships
+            more than 2 starships
         </p>
     {% endif %}
 </div>
