@@ -9,11 +9,12 @@ class StarshipRepository
 {
     public function __construct(private LoggerInterface $logger)
     {
-
     }
+
     public function findAll(): array
     {
         $this->logger->info('test test');
+
         return [
             new Starship(
                 1,
@@ -39,4 +40,13 @@ class StarshipRepository
         ];
     }
 
+    public function find(int $id): ?Starship
+    {
+        foreach ($this->findAll() as $starship) {
+            if ($starship->getId() === $id) {
+                return $starship;
+            }
+        }
+        return null;
+    }
 }
